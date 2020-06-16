@@ -53,7 +53,7 @@ function getWinners(callback) {
         } else if (awayGoals > homeGoals) {
             return data["Away Team Name"];
         } else {
-            return "Tied"
+            return data["Win conditions"];
         }
     });
 }
