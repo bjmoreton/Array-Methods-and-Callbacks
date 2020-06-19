@@ -39,7 +39,7 @@ function getYears(callback) {
     });
 }
 
-console.log(getYears(getFinals));
+console.log("getYears: ", getYears(getFinals));
 
 /* Task 5: Implement a higher-order function called `getWinners`, that accepts the callback function `getFinals()` and determine the winner (home or away) of each `finals` game. Return the name of all winning countries in an array called `winners` */
 
@@ -70,7 +70,7 @@ Parameters:
 function getWinnersByYear(callbackWinners, callbackYears) {
     let winners = [];
     let years = callbackYears(getFinals);
-    
+
     callbackWinners(getFinals).forEach((winner, i) => {
         winners.push(`In ${years[i]}, ${winner} won the world cup!`);
     });
